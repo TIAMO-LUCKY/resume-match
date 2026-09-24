@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tiamo-lucky.github.io/resume-match/sitemap.xml

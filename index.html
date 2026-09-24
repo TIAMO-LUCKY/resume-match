@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resume ↔ JD Match — see the keywords the job posting repeats</title>
+
+<!-- URLs below point at https://tiamo-lucky.github.io/resume-match/ (set by setup.py) -->
+<meta name="description" content="Paste a job description and your resume. Get every keyword it repeats, a ready-to-paste sentence for each gap, and the structural fixes that stop a resume parsing as blank. Runs entirely in your browser — no upload, no signup, unlimited scans.">
+<link rel="canonical" href="https://tiamo-lucky.github.io/resume-match/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Resume &harr; JD Match">
+<meta property="og:url" content="https://tiamo-lucky.github.io/resume-match/">
+<meta property="og:title" content="Resume &harr; JD Match — see the keywords the job posting repeats">
+<meta property="og:description" content="Paste a job description and your resume. Get every keyword it repeats, a ready-to-paste sentence for each gap, and the structural fixes that stop a resume parsing as blank. No upload, no signup, unlimited.">
+<meta property="og:image" content="https://tiamo-lucky.github.io/resume-match/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Resume and job description side by side, with matched keywords highlighted">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="See the keywords the job posting repeats">
+<meta name="twitter:description" content="Paste a JD and your resume. Get every repeated keyword, a sentence for each gap, and the fixes that stop your resume parsing as blank. No upload, no signup.">
+<meta name="twitter:image" content="https://tiamo-lucky.github.io/resume-match/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234338ca'/%3E%3Ctext x='32' y='41' font-family='-apple-system,Segoe UI,sans-serif' font-size='22' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3Ctext x='32' y='41' font-family='-apple-system,Segoe UI,sans-serif' font-size='15' font-weight='700' fill='%23a5b4fc' text-anchor='middle' dx='14'%3E%26%238599%3B%3C/text%3E%3Ctext x='32' y='41' font-family='-apple-system,Segoe UI,sans-serif' font-size='22' font-weight='700' fill='white' text-anchor='middle' dx='30'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo">R↔J</span>
+      <div>
+        <h1>Resume &harr; Job Description Match</h1>
+        <p class="sub">See exactly which keywords the job posting wants &mdash; and the sentence to add each one.</p>
+      </div>
+    </div>
+    <div class="trust">
+      <span class="badge b1">No upload</span>
+      <span class="badge b2">No signup</span>
+      <span class="badge b3">Unlimited scans</span>
+    </div>
+  </div>
+</header>
+
+<div class="notice">
+  <div class="wrap">
+    <b>Honest disclaimer:</b> no third-party tool can see an employer's real ATS configuration. This gives you the two things that <i>are</i> verifiable &mdash; <b>1)</b> keyword gaps against this specific posting, and <b>2)</b> formatting that genuinely breaks parsing. Treat the match number as a direction, not a grade.
+  </div>
+</div>
+
+<!-- Most people land here with nothing to upload. One click shows them the
+     finished report, which is what decides whether they hand over their own file. -->
+<div class="demobar">
+  <div class="wrap">
+    <div class="demoicon">&#9654;</div>
+    <div class="demotext">
+      <b>Not sure where to start?</b>
+      <span>Run it on a sample pair first. One click, nothing to upload, nothing leaves your machine.</span>
+    </div>
+    <button id="fullDemo" class="demobtn">Show me a full example report</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="io">
+    <div class="pane">
+      <div class="phead">
+        <h2>1 &middot; Job description</h2>
+        <div class="pbtns">
+          <button class="mini" id="sampleJd">use a sample posting</button>
+        </div>
+      </div>
+      <textarea id="jd" placeholder="Paste the job posting here — copy the whole thing, including the requirements list."></textarea>
+      <div class="meta">
+        <span id="jdCount">0</span> characters
+        <span class="meta-good" id="jdHint" hidden>That is plenty.</span>
+      </div>
+      <div class="tipbox">
+        <b>How to get it:</b> open the job posting, select everything from the title to the bottom, copy, paste here.
+        Short summaries give a shallow keyword list &mdash; the requirements section is where the useful words live.
+      </div>
+    </div>
+
+    <div class="pane">
+      <div class="phead">
+        <h2>2 &middot; Your resume</h2>
+        <div class="pbtns">
+          <button class="mini" id="sampleResume">paste sample text</button>
+          <button class="mini mini-alt" id="sampleDocx">load the sample .docx</button>
+        </div>
+      </div>
+      <div id="drop" class="drop">
+        <div class="dz-icon">&#8681;</div>
+        <div class="dz-main">Drop your resume here</div>
+        <div class="dz-sub">It is read in your browser. Nothing is uploaded &mdash; there is no server.</div>
+        <div class="dz-or">or</div>
+        <div class="btn-ghost">Choose file</div>
+        <input type="file" id="file" accept=".docx,.pdf,.txt" hidden>
+      </div>
+      <div id="reading" class="reading" hidden><span class="spin"></span><span id="readingText">Reading file&hellip;</span></div>
+      <div id="fileOk" class="fileok" hidden>
+        <span id="fileName"></span>
+        <button class="mini" id="clearFile">remove</button>
+      </div>
+      <div id="fileNote" class="filenote" hidden></div>
+
+      <textarea id="resume" placeholder="...or paste your resume text here. Ctrl+A inside a PDF viewer works fine — layout does not matter for keyword matching."></textarea>
+      <div class="meta"><span id="resCount">0</span> characters</div>
+
+      <div class="fmts">
+        <span class="fmt ok">.docx</span>
+        <span class="fmt ok">.pdf</span>
+        <span class="fmt ok">.txt</span>
+        <span class="fmt no" title="Old binary Word format">.doc &mdash; re-save as .docx</span>
+        <span class="fmt no" title="Image or photo of a page">scanned image &mdash; no text to read</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="runbar">
+    <button id="run" class="run" disabled>Analyze match</button>
+    <div id="runHint" class="runhint">Add both the job description and your resume.</div>
+  </div>
+
+  <div id="error" class="error" hidden></div>
+  <div id="warnbox" class="warnbox" hidden></div>
+
+  <section id="results" class="results" hidden>
+
+    <div class="scorecard">
+      <div class="ring" id="ring">
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <circle cx="60" cy="60" r="52" class="rring-bg"></circle>
+          <circle cx="60" cy="60" r="52" class="rring-fg" id="arc"></circle>
+        </svg>
+        <div class="rnum"><span id="pct">0</span><i>%</i></div>
+      </div>
+      <div class="stext">
+        <h3>Keyword coverage</h3>
+        <p id="verdict"></p>
+        <div class="bars">
+          <div class="bar"><span>Matched</span><div class="track"><div class="fill f-ok" id="bOk"></div></div><b id="nOk">0</b></div>
+          <div class="bar"><span>Partial</span><div class="track"><div class="fill f-mid" id="bMid"></div></div><b id="nMid">0</b></div>
+          <div class="bar"><span>Missing</span><div class="track"><div class="fill f-bad" id="bBad"></div></div><b id="nBad">0</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="bhead">
+        <h3>Keyword gaps</h3>
+        <p>Ordered by how much this posting cares. &ldquo;Partial&rdquo; means you likely have the skill under a different spelling.</p>
+      </div>
+      <div id="kwList" class="kwlist"></div>
+    </div>
+
+    <div class="block">
+      <div class="bhead">
+        <h3>Parsing checks</h3>
+        <p>Things that make an ATS extract your file wrong &mdash; or fail to extract it at all. These read the document structure, not just the words.</p>
+      </div>
+      <div id="chkList" class="chklist"></div>
+    </div>
+
+    <div class="cta" id="cta">
+      <div class="ctain">
+        <h3 id="ctaTitle"></h3>
+        <p id="ctaBody"></p>
+        <ul class="ctalist">
+          <li>All missing keywords with a ready-to-paste sentence for each</li>
+          <li>Fix instructions for every parsing issue found</li>
+          <li>Cover-letter angle: the 3 requirements they repeated most</li>
+          <li>One price, once. No subscription, no account.</li>
+        </ul>
+        <div class="ctarow">
+          <button class="pay" id="payBtn">Unlock full report &mdash; $7</button>
+          <span class="price-alt">Jobscan charges $49.95/month for the diagnosis alone.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <h3>Why this is free to run</h3>
+    <div class="whygrid">
+      <div class="wcard">
+        <b>It runs on your machine.</b>
+        <p>Your resume and the posting are parsed by JavaScript in this tab. There is no backend to send them to, which is why scans can be unlimited.</p>
+      </div>
+      <div class="wcard">
+        <b>No score theatre.</b>
+        <p>Many tools show a low number to sell you the fix. This one shows the keyword list first, because that is the part you can actually act on.</p>
+      </div>
+      <div class="wcard">
+        <b>The gap it fills.</b>
+        <p>Paid scanners tell you what is missing and leave the rewriting to you. The unlock gives you the sentence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rolelinks">
+    <h3>Just want the keyword list for your role?</h3>
+    <p class="sub">Free, no file needed &mdash; pick your role and check your resume against the words those postings repeat most.</p>
+    <div class="trust">
+      <a class="badge b2" href="seo/out/frontend-engineer.html">Frontend Engineer</a>
+      <a class="badge b2" href="seo/out/backend-engineer.html">Backend Engineer</a>
+      <a class="badge b2" href="seo/out/data-analyst.html">Data Analyst</a>
+      <a class="badge b2" href="seo/out/data-engineer.html">Data Engineer</a>
+      <a class="badge b2" href="seo/out/devops-engineer.html">DevOps / SRE</a>
+      <a class="badge b2" href="seo/out/product-manager.html">Product Manager</a>
+      <a class="badge b2" href="seo/out/qa-automation-engineer.html">QA Automation</a>
+      <a class="badge b2" href="seo/out/ux-designer.html">UX Designer</a>
+      <a class="badge b2" href="seo/out/index.html">All roles</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    Runs entirely in your browser &middot; No account, no email, no tracking &middot;
+    <a href="#" id="howLink">How I know nothing is uploaded</a>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="mbox">
+    <button class="x" id="closeModal">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="lib/jszip.min.js"></script>
+<script src="lib/pdf.min.js"></script>
+<script src="samples.js"></script>
+<script src="license.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

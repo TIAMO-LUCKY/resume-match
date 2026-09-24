@@ -1,0 +1,886 @@
+{
+  "_note": [
+    "每个职位的 keywords 是给页面的『起点清单』，不是从真实 JD 采样统计出来的。",
+    "严禁在页面里编造统计数据（例如『73% 的 JD 提到 X』）——2026 年 Google 的事实一致性检测专抓这个，",
+    "而且这是最快毁掉域名信任的方式。要写数字，必须有可核查的来源。",
+    "alias 是同一能力的其他写法，页面会提示『解析器比字符串，不比语义』。"
+  ],
+  "_home_url": "https://tiamo-lucky.github.io/resume-match/seo/out/",
+  "_tool_url": "https://tiamo-lucky.github.io/resume-match/",
+  "_todo": "URLs set by setup.py. Edit _home_url/_tool_url directly only if you move the site.",
+  "_jobs": {
+    "frontend-engineer": {
+      "title": "Frontend Engineer",
+      "h1": "Frontend Engineer Resume Keywords",
+      "blurb": "前端岗的简历最常栽在一件事上：你写的是『用过 React 的某某替代方案』或者『熟悉 ES6』，而 JD 和解析器要的是原词。前端 JD 里重复出现的词高度集中，这一页把它们列出来，并且给每个词它可能被写成什么样。",
+      "keywords": [
+        {
+          "k": "React",
+          "alias": [
+            "React.js",
+            "ReactJS"
+          ]
+        },
+        {
+          "k": "TypeScript",
+          "alias": [
+            "TS"
+          ]
+        },
+        {
+          "k": "JavaScript",
+          "alias": [
+            "JS",
+            "ES6",
+            "ECMAScript"
+          ]
+        },
+        {
+          "k": "CSS",
+          "alias": [
+            "CSS3",
+            "modern CSS"
+          ]
+        },
+        {
+          "k": "HTML",
+          "alias": [
+            "HTML5"
+          ]
+        },
+        {
+          "k": "responsive design",
+          "alias": [
+            "responsive layouts"
+          ]
+        },
+        {
+          "k": "accessibility",
+          "alias": [
+            "WCAG",
+            "a11y",
+            "WCAG 2.1 AA"
+          ]
+        },
+        {
+          "k": "state management",
+          "alias": [
+            "Redux",
+            "Zustand"
+          ]
+        },
+        {
+          "k": "GraphQL",
+          "alias": []
+        },
+        {
+          "k": "REST API",
+          "alias": [
+            "RESTful",
+            "REST APIs"
+          ]
+        },
+        {
+          "k": "Jest",
+          "alias": []
+        },
+        {
+          "k": "unit testing",
+          "alias": [
+            "unit tests"
+          ]
+        },
+        {
+          "k": "CI/CD",
+          "alias": [
+            "CI",
+            "continuous integration"
+          ]
+        },
+        {
+          "k": "webpack",
+          "alias": [
+            "Vite"
+          ]
+        },
+        {
+          "k": "Git",
+          "alias": [
+            "version control"
+          ]
+        },
+        {
+          "k": "code review",
+          "alias": [
+            "pull requests"
+          ]
+        },
+        {
+          "k": "Core Web Vitals",
+          "alias": [
+            "page load performance",
+            "web vitals"
+          ]
+        },
+        {
+          "k": "Next.js",
+          "alias": [
+            "Remix"
+          ]
+        },
+        {
+          "k": "design systems",
+          "alias": [
+            "design system"
+          ]
+        },
+        {
+          "k": "cross-browser",
+          "alias": [
+            "browser compatibility"
+          ]
+        }
+      ]
+    },
+    "backend-engineer": {
+      "title": "Backend Engineer",
+      "h1": "Backend Engineer Resume Keywords",
+      "blurb": "后端岗的关键词分两类：语言与存储（好补），以及『你怎么保证它不出事』（不好补，偏偏这部分是区分度最高的）。很多人只写了第一类，然后在系统设计和可观测性上被判缺失。",
+      "keywords": [
+        {
+          "k": "Python",
+          "alias": []
+        },
+        {
+          "k": "Java",
+          "alias": []
+        },
+        {
+          "k": "Node.js",
+          "alias": [
+            "Node",
+            "NodeJS"
+          ]
+        },
+        {
+          "k": "Go",
+          "alias": [
+            "Golang"
+          ]
+        },
+        {
+          "k": "SQL",
+          "alias": []
+        },
+        {
+          "k": "PostgreSQL",
+          "alias": [
+            "Postgres"
+          ]
+        },
+        {
+          "k": "MySQL",
+          "alias": []
+        },
+        {
+          "k": "Redis",
+          "alias": []
+        },
+        {
+          "k": "REST API",
+          "alias": [
+            "RESTful",
+            "REST APIs"
+          ]
+        },
+        {
+          "k": "GraphQL",
+          "alias": []
+        },
+        {
+          "k": "microservices",
+          "alias": []
+        },
+        {
+          "k": "Docker",
+          "alias": [
+            "containerization"
+          ]
+        },
+        {
+          "k": "Kubernetes",
+          "alias": [
+            "K8s"
+          ]
+        },
+        {
+          "k": "AWS",
+          "alias": [
+            "Amazon Web Services"
+          ]
+        },
+        {
+          "k": "Kafka",
+          "alias": [
+            "message queue",
+            "RabbitMQ"
+          ]
+        },
+        {
+          "k": "unit testing",
+          "alias": [
+            "unit tests"
+          ]
+        },
+        {
+          "k": "CI/CD",
+          "alias": [
+            "continuous integration"
+          ]
+        },
+        {
+          "k": "caching",
+          "alias": []
+        },
+        {
+          "k": "system design",
+          "alias": []
+        },
+        {
+          "k": "observability",
+          "alias": [
+            "monitoring",
+            "logging"
+          ]
+        }
+      ]
+    },
+    "data-analyst": {
+      "title": "Data Analyst",
+      "h1": "Data Analyst Resume Keywords",
+      "blurb": "数据分析岗有个陷阱：技能栏写一堆工具名，但 JD 真正反复出现的是『你能不能把结论讲给不懂数据的人听』。工具词好补， stakeholder 那类词不能只当形容词写——要挂到一个具体的事情上。",
+      "keywords": [
+        {
+          "k": "SQL",
+          "alias": []
+        },
+        {
+          "k": "Excel",
+          "alias": [
+            "Microsoft Excel"
+          ]
+        },
+        {
+          "k": "Python",
+          "alias": []
+        },
+        {
+          "k": "pandas",
+          "alias": []
+        },
+        {
+          "k": "Tableau",
+          "alias": []
+        },
+        {
+          "k": "Power BI",
+          "alias": []
+        },
+        {
+          "k": "Looker",
+          "alias": []
+        },
+        {
+          "k": "A/B testing",
+          "alias": [
+            "split testing",
+            "experimentation"
+          ]
+        },
+        {
+          "k": "data visualization",
+          "alias": [
+            "visualization"
+          ]
+        },
+        {
+          "k": "ETL",
+          "alias": [
+            "data pipeline"
+          ]
+        },
+        {
+          "k": "Google Analytics",
+          "alias": [
+            "GA4"
+          ]
+        },
+        {
+          "k": "dashboard",
+          "alias": [
+            "dashboards",
+            "reporting"
+          ]
+        },
+        {
+          "k": "stakeholder management",
+          "alias": [
+            "stakeholder communication"
+          ]
+        },
+        {
+          "k": "hypothesis testing",
+          "alias": [
+            "statistical testing"
+          ]
+        },
+        {
+          "k": "regression analysis",
+          "alias": []
+        },
+        {
+          "k": "data cleaning",
+          "alias": [
+            "data quality"
+          ]
+        },
+        {
+          "k": "statistics",
+          "alias": []
+        },
+        {
+          "k": "SQL queries",
+          "alias": [
+            "complex queries"
+          ]
+        }
+      ]
+    },
+    "product-manager": {
+      "title": "Product Manager",
+      "h1": "Product Manager Resume Keywords",
+      "blurb": "产品经理岗的简历最常见的问题是写满了形容词（『有 owner 意识』『结果导向』），而这些词在解析器眼里权重很低，在 recruiter 眼里更是不值钱。这一页的词要挂到具体的事上才有用：不是『会做优先级排序』，而是『砍掉了 X，换来 Y』。",
+      "keywords": [
+        {
+          "k": "roadmap",
+          "alias": [
+            "product roadmap"
+          ]
+        },
+        {
+          "k": "user stories",
+          "alias": []
+        },
+        {
+          "k": "prioritization",
+          "alias": [
+            "prioritize"
+          ]
+        },
+        {
+          "k": "A/B testing",
+          "alias": [
+            "experimentation"
+          ]
+        },
+        {
+          "k": "OKR",
+          "alias": [
+            "KPI",
+            "metrics"
+          ]
+        },
+        {
+          "k": "stakeholder management",
+          "alias": [
+            "cross-functional"
+          ]
+        },
+        {
+          "k": "user research",
+          "alias": [
+            "customer interviews"
+          ]
+        },
+        {
+          "k": "SQL",
+          "alias": []
+        },
+        {
+          "k": "Agile",
+          "alias": [
+            "Scrum"
+          ]
+        },
+        {
+          "k": "Jira",
+          "alias": []
+        },
+        {
+          "k": "product discovery",
+          "alias": []
+        },
+        {
+          "k": "go-to-market",
+          "alias": [
+            "GTM"
+          ]
+        },
+        {
+          "k": "competitive analysis",
+          "alias": []
+        },
+        {
+          "k": "backlog",
+          "alias": [
+            "backlog grooming"
+          ]
+        },
+        {
+          "k": "wireframes",
+          "alias": [
+            "mockups"
+          ]
+        },
+        {
+          "k": "user flows",
+          "alias": []
+        },
+        {
+          "k": "product analytics",
+          "alias": [
+            "Amplitude",
+            "Mixpanel"
+          ]
+        },
+        {
+          "k": "MVP",
+          "alias": []
+        }
+      ]
+    },
+    "devops-engineer": {
+      "title": "DevOps / SRE",
+      "h1": "DevOps & SRE Resume Keywords",
+      "blurb": "DevOps 岗最容易被判缺失的不是工具名（工具名大家都会堆），而是『出事的时候你干什么』—— on-call、incident response、SLO。这部分写不出来的人，工具写得再全也不像做过运维。",
+      "keywords": [
+        {
+          "k": "Docker",
+          "alias": [
+            "containerization"
+          ]
+        },
+        {
+          "k": "Kubernetes",
+          "alias": [
+            "K8s"
+          ]
+        },
+        {
+          "k": "Terraform",
+          "alias": [
+            "IaC",
+            "infrastructure as code"
+          ]
+        },
+        {
+          "k": "AWS",
+          "alias": [
+            "GCP",
+            "Azure"
+          ]
+        },
+        {
+          "k": "CI/CD",
+          "alias": [
+            "continuous delivery"
+          ]
+        },
+        {
+          "k": "Jenkins",
+          "alias": [
+            "GitHub Actions",
+            "GitLab CI"
+          ]
+        },
+        {
+          "k": "Prometheus",
+          "alias": [
+            "Grafana"
+          ]
+        },
+        {
+          "k": "observability",
+          "alias": [
+            "monitoring",
+            "tracing"
+          ]
+        },
+        {
+          "k": "Linux",
+          "alias": [
+            "Unix"
+          ]
+        },
+        {
+          "k": "Bash",
+          "alias": [
+            "shell scripting"
+          ]
+        },
+        {
+          "k": "Python",
+          "alias": []
+        },
+        {
+          "k": "Ansible",
+          "alias": []
+        },
+        {
+          "k": "incident response",
+          "alias": [
+            "on-call",
+            "postmortem"
+          ]
+        },
+        {
+          "k": "SLO",
+          "alias": [
+            "SLI",
+            "SLA"
+          ]
+        },
+        {
+          "k": "Helm",
+          "alias": []
+        },
+        {
+          "k": "Git",
+          "alias": []
+        },
+        {
+          "k": "cloud migration",
+          "alias": []
+        },
+        {
+          "k": "cost optimization",
+          "alias": [
+            "FinOps"
+          ]
+        }
+      ]
+    },
+    "data-engineer": {
+      "title": "Data Engineer",
+      "h1": "Data Engineer Resume Keywords",
+      "blurb": "数据工程岗和分析岗的关键词差别很大：这里几乎不关心你怎么讲故事，关心的是 pipeline 的规模、延迟、和你用什么调度。写『做过数仓』不如写清楚用什么、多大、多快。",
+      "keywords": [
+        {
+          "k": "Python",
+          "alias": []
+        },
+        {
+          "k": "SQL",
+          "alias": []
+        },
+        {
+          "k": "Spark",
+          "alias": [
+            "PySpark"
+          ]
+        },
+        {
+          "k": "Airflow",
+          "alias": [
+            "orchestration"
+          ]
+        },
+        {
+          "k": "ETL",
+          "alias": [
+            "ELT",
+            "data pipeline"
+          ]
+        },
+        {
+          "k": "Kafka",
+          "alias": [
+            "streaming"
+          ]
+        },
+        {
+          "k": "dbt",
+          "alias": []
+        },
+        {
+          "k": "Snowflake",
+          "alias": [
+            "BigQuery",
+            "Redshift"
+          ]
+        },
+        {
+          "k": "data modeling",
+          "alias": [
+            "dimensional modeling"
+          ]
+        },
+        {
+          "k": "data warehouse",
+          "alias": [
+            "warehouse"
+          ]
+        },
+        {
+          "k": "AWS",
+          "alias": [
+            "GCP"
+          ]
+        },
+        {
+          "k": "Docker",
+          "alias": []
+        },
+        {
+          "k": "schema design",
+          "alias": []
+        },
+        {
+          "k": "data quality",
+          "alias": [
+            "data validation"
+          ]
+        },
+        {
+          "k": "batch processing",
+          "alias": [
+            "stream processing"
+          ]
+        },
+        {
+          "k": "Airflow DAGs",
+          "alias": [
+            "DAG"
+          ]
+        },
+        {
+          "k": "CI/CD",
+          "alias": []
+        },
+        {
+          "k": "Git",
+          "alias": []
+        }
+      ]
+    },
+    "qa-automation-engineer": {
+      "title": "QA Automation Engineer",
+      "h1": "QA Automation Resume Keywords",
+      "blurb": "测试岗的简历最容易显得『只会点』。区分手动测试和自动化的关键词是框架名 + 把测试接进流水线的那部分。写了 Selenium 但没写 CI/CD，在解析器眼里是半个自动化。",
+      "keywords": [
+        {
+          "k": "Selenium",
+          "alias": []
+        },
+        {
+          "k": "Playwright",
+          "alias": []
+        },
+        {
+          "k": "Cypress",
+          "alias": []
+        },
+        {
+          "k": "Python",
+          "alias": []
+        },
+        {
+          "k": "Java",
+          "alias": []
+        },
+        {
+          "k": "TypeScript",
+          "alias": [
+            "JavaScript"
+          ]
+        },
+        {
+          "k": "test automation",
+          "alias": [
+            "automated testing"
+          ]
+        },
+        {
+          "k": "unit testing",
+          "alias": [
+            "unit tests"
+          ]
+        },
+        {
+          "k": "integration testing",
+          "alias": [
+            "integration tests"
+          ]
+        },
+        {
+          "k": "API testing",
+          "alias": [
+            "Postman"
+          ]
+        },
+        {
+          "k": "CI/CD",
+          "alias": []
+        },
+        {
+          "k": "Jest",
+          "alias": []
+        },
+        {
+          "k": "regression testing",
+          "alias": [
+            "regression suite"
+          ]
+        },
+        {
+          "k": "test plan",
+          "alias": [
+            "test cases"
+          ]
+        },
+        {
+          "k": "Jira",
+          "alias": []
+        },
+        {
+          "k": "Git",
+          "alias": []
+        },
+        {
+          "k": "BDD",
+          "alias": [
+            "Cucumber"
+          ]
+        },
+        {
+          "k": "load testing",
+          "alias": [
+            "performance testing",
+            "JMeter"
+          ]
+        }
+      ]
+    },
+    "ux-designer": {
+      "title": "UX Designer",
+      "h1": "UX Designer Resume Keywords",
+      "blurb": "设计岗的简历有两个坑：一是作品集链接放在图片或文本框里（解析器读不到，等于没有）；二是只写工具名。工具是入场券，真正区分人的是你做过什么研究、怎么验证的。",
+      "keywords": [
+        {
+          "k": "Figma",
+          "alias": [
+            "Sketch",
+            "Adobe XD"
+          ]
+        },
+        {
+          "k": "wireframes",
+          "alias": [
+            "wireframing"
+          ]
+        },
+        {
+          "k": "prototyping",
+          "alias": [
+            "prototypes"
+          ]
+        },
+        {
+          "k": "user research",
+          "alias": [
+            "usability testing"
+          ]
+        },
+        {
+          "k": "design systems",
+          "alias": [
+            "design system"
+          ]
+        },
+        {
+          "k": "information architecture",
+          "alias": [
+            "IA"
+          ]
+        },
+        {
+          "k": "accessibility",
+          "alias": [
+            "WCAG",
+            "a11y"
+          ]
+        },
+        {
+          "k": "interaction design",
+          "alias": [
+            "IxD"
+          ]
+        },
+        {
+          "k": "user flows",
+          "alias": [
+            "user journeys"
+          ]
+        },
+        {
+          "k": "journey mapping",
+          "alias": [
+            "customer journey"
+          ]
+        },
+        {
+          "k": "A/B testing",
+          "alias": [
+            "experimentation"
+          ]
+        },
+        {
+          "k": "persona",
+          "alias": [
+            "user personas"
+          ]
+        },
+        {
+          "k": "responsive design",
+          "alias": [
+            "mobile design"
+          ]
+        },
+        {
+          "k": "usability testing",
+          "alias": []
+        },
+        {
+          "k": "stakeholder management",
+          "alias": [
+            "cross-functional"
+          ]
+        },
+        {
+          "k": "design thinking",
+          "alias": []
+        },
+        {
+          "k": "user interviews",
+          "alias": []
+        },
+        {
+          "k": "visual design",
+          "alias": [
+            "UI design"
+          ]
+        }
+      ]
+    }
+  }
+}
