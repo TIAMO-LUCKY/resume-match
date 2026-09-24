@@ -1,4 +1,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
+/* The page hides things with the HTML hidden attribute, but several of those
+   elements also carry a class that sets display (`.modal`, `.reading`,
+   `.fileok`). Author styles beat the browser's default [hidden] rule, so
+   without this line all three stay visible and the modal overlay sits on top
+   of the whole page. */
+[hidden]{display:none!important}
 :root{
   --ink:#111827; --ink2:#374151; --ink3:#6b7280; --ink4:#9ca3af;
   --line:#e5e7eb; --line2:#eef0f3; --bg:#ffffff; --bg2:#f7f8fa; --bg3:#f2f4f7;
