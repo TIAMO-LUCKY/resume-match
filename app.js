@@ -7,9 +7,9 @@
 
 var FREE_MISSING = 5;      // how many missing keywords are shown before the unlock
 
-// Put your real Lemon Squeezy / Gumroad checkout URL here. Everything else on
-// the page is already wired to this one variable.
-var CHECKOUT_URL = "";
+// Put your real PayPal payment link here (Gumroad also works). Everything else
+// on the page is already wired to this one variable.
+var CHECKOUT_URL = "https://www.paypal.com/ncp/payment/KE8UKME5CQ6SL";
 
 // Shown when CHECKOUT_URL is still empty. Lets the page ship while the payment
 // provider is still reviewing the store -- an honest waiting list beats a dead
@@ -1224,9 +1224,14 @@ el("payBtn").addEventListener("click", function(){
 
   var pay;
   if(CHECKOUT_URL){
-    pay = "<a class='paybtn' href='" + CHECKOUT_URL + "' target='_blank' rel='noopener'>Pay once &mdash; $7</a>" +
-      "<p class='paynote'>Opens the payment page in a new tab. When it finishes, it brings you back here; " +
-      "if nothing happens, paste the code from your receipt email below.</p>";
+    // Naming the provider the button opens converts better than a generic
+    // "Pay" label: people recognise where they are about to pay.
+    var viaPayPal = /paypal\.com/i.test(CHECKOUT_URL);
+    pay = "<a class='paybtn' href='" + CHECKOUT_URL + "' target='_blank' rel='noopener'>" +
+      (viaPayPal ? "Pay with PayPal &mdash; $7" : "Pay once &mdash; $7") + "</a>" +
+      "<p class='paynote'>Opens " + (viaPayPal ? "PayPal" : "the payment page") +
+      " in a new tab. When the payment finishes it brings you straight back here, unlocked. " +
+      "If it does not, paste the code from your receipt email below.</p>";
   } else if(NOTIFY_EMAIL){
     // No checkout yet: the report stays free and the button becomes a mailbox.
     // Saying so plainly costs nothing and is the only honest version of this.

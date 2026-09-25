@@ -1,0 +1,9 @@
+generated=200
+self_test=PASS (200/200 round-tripped)
+sample=E2DZNYMQE47E
+collision_guard=on
+
+Space used: 32^9 = 35,184,372,088,832 possible codes.
+(~35.2 trillion, for reference.)
+Not enough to stop a determined attacker -- nothing client-side can.
+Enough that nobody invents one by typing.

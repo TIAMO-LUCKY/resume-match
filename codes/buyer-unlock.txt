@@ -1,0 +1,77 @@
+Thank you — here is everything you need.
+
+=====================================================
+ Resume <-> Job Description Keyword Matcher
+ Your unlock code:  E2DZNYMQE47E
+=====================================================
+
+You should already be unlocked. If you were sent back to the
+tool automatically after paying, it is open and you can ignore
+the rest of this file.
+
+If it is still locked (different browser, cleared cookies, or
+you paid on your phone and want it on your laptop), use the code
+above. Two ways:
+
+  1) On the tool, click the price button at the bottom of the
+     report. In the window that opens there is a line reading
+     "Already paid? Paste your code" — paste it into the box
+     next to it and press Unlock.
+
+  2) Or open the tool with the code in the address:
+
+     https://tiamo-lucky.github.io/resume-match/?unlock=E2DZNYMQE47E
+
+     It unlocks on load and then removes the code from the
+     address bar so it does not sit in your history.
+
+The code is yours to keep. It is tied to no account and expires
+never.
+
+-----------------------------------------------------
+ WHAT YOU ACTUALLY BOUGHT
+-----------------------------------------------------
+
+The full report replaces the blurred half of the page with:
+
+  - The complete keyword gap list. Every requirement word the
+    posting uses that your resume never mentions, ranked by how
+    often the posting repeats it.
+  - A paste-ready sentence for each gap, written in your own
+    resume's voice, so you can drop it straight into a bullet.
+  - The full parsing check: the eight structural problems that
+    make an employer's system read your resume wrong — text
+    boxes, columns, a missing email header, tables, and more.
+    These are invisible to plain-text tools and are usually the
+    real reason a qualified person gets no reply.
+
+-----------------------------------------------------
+ HOW IT WORKS, AND WHY IT IS BUILT THIS WAY
+-----------------------------------------------------
+
+Your resume never leaves your machine. There is no upload, no
+server, no account, and nothing is stored anywhere. All the
+parsing and matching happens in your own browser with
+JavaScript. That is why there is also no per-scan limit — run
+it on as many postings as you like.
+
+There is also no "match score". You will not see a number
+pretending to measure your chances, because no outside tool can
+read an employer's actual configuration. What you get is the
+two things that are genuinely verifiable: the keyword gaps for
+this specific posting, and the formatting that reliably breaks
+parsing.
+
+-----------------------------------------------------
+ IF SOMETHING IS WRONG
+-----------------------------------------------------
+
+Reply to your receipt email. Refunds are fine within 30 days,
+no explanation needed.
+
+One honest note in advance: if you paste a scanned PDF (a
+picture of a page rather than real text) or an old .doc file,
+there is no text to read. Save those as .docx or copy the text
+out and paste it — that works every time.
+
+-- Resume <-> JD Match
